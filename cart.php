@@ -60,7 +60,7 @@
     );
 
 $_SESSION['totalAmount'] = 0;
-s
+
 if(isset($_POST['btnUpdate'])){
      $cartKeys = $_POST['hdnKey'];
      $cartSize = $_POST['hdnSize'];

@@ -58,6 +58,14 @@
             'photo2'        => 'produc8B.jpg',
         )
     );
+    if(isset($_POST['btnRemove'])){
+        unset($_SESSION['cartItems'][$_POST['hdnKey']][$_POST['hdnSize']]);
+
+        $_SESSION['totalQuantity'] -= $_POST['hdnQuantity'];
+        header("location: cart.php");
+    }
+    
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -106,7 +114,7 @@
                             <?php echo $arrProducts[$_GET['k']]['name']; ?>
                             <span class="badge badge-dark">₱<?php echo $arrProducts[$_GET['k']]['price']; ?></span>
                         </h3>
-                        <p><?php echo $arrProducts[$_GET['key']]['description']; ?></p>
+                        <p><?php echo $arrProducts[$_GET['k']]['description']; ?></p>
                         <hr>
                         <input type="hidden" name="hdnKey" value="<?php echo $_GET['k']; ?>">
                         <input type="hidden" name="hdnSize" value="<?php echo $_GET['s']; ?>">
