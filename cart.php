@@ -88,7 +88,7 @@ if(isset($_POST['btnUpdate'])){
     <div class="container pt-5">
         <div class="row">
             <div class="col-md-10">
-                <h1><i class="fa fa-store"></i> Means Wear Shop</h1>
+                <h1><i class="fa fa-store"></i> Jacket Pang Marimla</h1>
             </div>
             <div class="col-md-2">
                 <a href="cart.php" class="btn btn-primary">
